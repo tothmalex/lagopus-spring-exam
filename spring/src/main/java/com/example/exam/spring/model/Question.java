@@ -12,10 +12,10 @@ import javax.persistence.Id;
         @GeneratedValue(strategy = GenerationType.AUTO)
         long id;
 
-        String content;
+        String question;
 
     public Question( String content ) {
-        this.content = content;
+        this.question = question;
     }
 
     public Question() {
@@ -29,11 +29,11 @@ import javax.persistence.Id;
         this.id = id;
     }
 
-    public String getContent() {
-        return content;
-    }
+        public String getQuestion() {
+            return question;
+        }
 
-    public void setContent( String content ) {
-        this.content = content;
+        public void setQuestion( String question ) {
+            this.question = question;
+        }
     }
-}
