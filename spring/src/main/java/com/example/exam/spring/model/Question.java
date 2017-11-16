@@ -5,16 +5,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-    @Entity
-    public class Question {
+@Entity
+public class Question {
 
-        @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
-        long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    long id;
 
-        String question;
+    String question;
 
-    public Question( String content ) {
+    public Question( String question ) {
         this.question = question;
     }
 
@@ -29,11 +29,11 @@ import javax.persistence.Id;
         this.id = id;
     }
 
-        public String getQuestion() {
-            return question;
-        }
-
-        public void setQuestion( String question ) {
-            this.question = question;
-        }
+    public String getQuestion() {
+        return question;
     }
+
+    public void setQuestion( String question ) {
+        this.question = question;
+    }
+}

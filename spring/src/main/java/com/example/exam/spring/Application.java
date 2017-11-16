@@ -1,6 +1,7 @@
 package com.example.exam.spring;
 
-import com.example.exam.spring.model.GroupOfQuestions;
+import com.example.exam.spring.model.GroupOfContent;
+import com.example.exam.spring.repository.AnswerRepo;
 import com.example.exam.spring.repository.QuestionRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -12,6 +13,9 @@ public class Application implements CommandLineRunner {
 	@Autowired
 	QuestionRepo questionRepo;
 
+	@Autowired
+	AnswerRepo answerRepo;
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
@@ -19,6 +23,7 @@ public class Application implements CommandLineRunner {
 
 	@Override
 	public void run( String... args ) throws Exception {
-	questionRepo.save(GroupOfQuestions.questions);
+	questionRepo.save(GroupOfContent.questions);
+	answerRepo.save(GroupOfContent.answers);
 	}
 }
