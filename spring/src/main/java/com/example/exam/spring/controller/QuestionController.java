@@ -24,6 +24,11 @@ public class QuestionController {
         return questionRepo.findAll();
     }
 
+    @GetMapping("/questions?id=5")
+    public Question listQuestionfive(@RequestParam Long id) {
+        return questionRepo.findOne(id);
+    }
+
     @GetMapping("/question")
     public Asking listing() {
         return new Asking(1, questionRepo.findAll());
